@@ -1,0 +1,1069 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Daughter_handwriting';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_03@1.0/Daughter_handwriting.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Middleschool_student';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_08@1.0/Middleschool_student.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: url(../images/cursor-p.png) 5 25, pointer;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+/* 메인 페이지 */
+
+.main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.main-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.main-img > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation-fill-mode: forwards;
+}
+
+.main-text-box{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.main-text {
+  font-family: 'Daughter_handwriting';
+  font-size: 5.5rem;
+  color: rgb(107, 50, 99);
+}
+
+.main-text2 {
+  font-size: 2.5rem;
+  font-family: 'Daughter_handwriting';
+  color: rgb(182, 103, 140);
+}
+
+.main-text-blink, .main-text-blink2 {
+  animation: blink 0.8s infinite;
+  font-size: 4.5rem;
+  font-family: 'Daughter_handwriting';
+  color: rgb(107, 50, 99);
+}
+
+.main-text-blink2 {
+  display: none;
+  font-size: 2.5rem;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+.main-bt {
+  position: absolute;
+  top: 44%;
+  left: calc(50% - 55px);
+  width: 110px;
+  height: 50px;
+  background-color: rgba(120, 55, 92, 0.8);
+  border-radius: 15px;
+  text-align: center;
+  line-height: 45px;
+  font-family: 'Daughter_handwriting';
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s;
+  opacity: 0;
+}
+
+.main-bt:hover {
+  background-color: rgba(120, 55, 92, 1);
+  color: rgb(255, 255, 154);
+  box-shadow: 0 0 50px rgb(255, 255, 154);
+}
+
+/* main - 버튼 클릭시 애니메이션 */
+
+@keyframes con {
+  30% {
+    position: absolute;
+    height: 0;
+    bottom: 0;
+  }
+  60% {
+    position: absolute;
+    height: 45%;
+    bottom: 0;
+  }
+  100% {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+  }
+}
+
+@keyframes bg {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes bg1 {
+  0% {
+    top: 0;
+  }
+  30% {
+    top: -80px;
+  }
+  60% {
+    top: 80px;
+    opacity: 1;
+  }
+  99% {
+    top: 300px;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes bg2 {
+  30% {
+    top: 0;
+  }
+  60% {
+    top: -5%;
+  }
+  100% {
+    top: -15%;
+    display: none;
+  }
+}
+
+@keyframes bg3 {
+  30% {
+    top: 0;
+  }
+  60% {
+    top: -15%;
+  }
+  100% {
+    top: -30%;
+    display: none;
+  }
+}
+
+@keyframes bg4 {
+  30% {
+    top: 0;
+  }
+  60% {
+    top: -20%;
+  }
+  100% {
+    top: -45%;
+    display: none;
+  }
+}
+
+@keyframes bg5 {
+  30% {
+    top: 0;
+  }
+  60% {
+    top: -30%;
+  }
+  100% {
+    top: -50%;
+    display: none;
+  }
+}
+
+@keyframes bg6 {
+  30% {
+    top: 0;
+  }
+  60% {
+    top: -35%;
+  }
+  100% {
+    top: -65%;
+    display: none;
+  }
+}
+
+@keyframes bg7 {
+  30% {
+    top: 0;
+  }
+  60% {
+    top: -40%;
+  }
+  100% {
+    top: -75%;
+    display: none;
+  }
+}
+
+@keyframes bg8 {
+  30% {
+    top: 0;
+  }
+  60% {
+    top: -45%;
+  }
+  100% {
+    top: -100%;
+    display: none;
+  }
+}
+
+
+/* 콘텐츠 */
+
+.contents-wrap {
+  background-color: #270c29;
+  width: 100%;
+  height: 0px;
+  position: relative;
+  z-index: 20;
+}
+
+.lighting {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 40;
+  display: none;
+}
+
+.lighting > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-fill-mode: forwards;
+}
+
+.lighting-s {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 245, 136, 0.4);
+  border-radius: 100%;
+  animation: li-s 3s 1;
+}
+
+.lighting-l {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(255, 245, 136, 0.2);
+  border-radius: 100%;
+  animation: li-l 3s 1;
+}
+
+@keyframes con2 {
+  0% {
+    background-color: #270c29;
+  }
+  25% {
+    background-color: #320f35;
+  }
+  65% {
+    background-color: #301546;
+  }
+  100% {
+    background-color: #a898cf;
+  }
+}
+
+@keyframes li-s {
+  0% {
+    opacity: 0;
+    width: 300px;
+    height: 300px;
+  }
+  25% {
+    opacity: 0.2;
+    width: 350px;
+    height: 350px;
+  }
+  45% {
+    opacity: 0.4;
+  }
+  65% {
+    opacity: 0.8;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+@keyframes li-l {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.2;
+    width: 400px;
+    height: 400px;
+  }
+  45% {
+    opacity: 0.4;
+  }
+  65% {
+    opacity: 0.8;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+.check-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 1;
+  transition: all 1s;
+}
+
+.check-wrap:hover {
+  cursor: url(../images/cursor-p.png) 5 25, pointer;
+}
+
+.check-memo {
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 250px);
+  width: 500px;
+  height: 700px;
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.check-memo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.check-text {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 100%;
+  font-family: 'Middleschool_student';
+  color: #0a0808;
+  z-index: 100;
+}
+
+.check-text p {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #0d090e;
+  letter-spacing: 2px;
+}
+
+.check-text span {
+  font-size: 2rem;
+  color: #160724;
+  text-align: left;
+  padding: 0 90px;
+  line-height: 70px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+.check-text .check:hover span {
+  font-size: 2.2rem;
+  font-weight: bold;
+  cursor: url(../images/cursor-p.png) 5 25, pointer;
+}
+
+.check:hover .check-v {
+  opacity: 1;
+  cursor: url(../images/cursor-p.png) 5 25, pointer;
+}
+
+.check:hover .check-box {
+  opacity: 0;
+  cursor: url(../images/cursor-p.png) 5 25, pointer;
+}
+
+.check-text .check:hover .check-bar {
+  width: 110px;
+  cursor: url(../images/cursor-p.png) 5 25, pointer;
+}
+
+.check {
+  position: relative;
+}
+
+.check-box {
+  display:inline-block;
+  position: relative;
+  top: 15px;
+  left: 70px;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s;
+}
+
+.check-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.check-v {
+  position: absolute;
+  top: 15px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.check-v img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.check-bar {
+  position: absolute;
+  top: 45px;
+  left: 130px;
+  width: 0px;
+  height: 12px;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.check-bar img {
+  width: 110px;
+  height: 100%;
+}
+
+.check-sub {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  z-index: 30;
+  top: 10%;
+  left: -100%;
+  transition: all 1s;
+}
+
+.check-sub:hover {
+  cursor: url(../images/cursor-p.png) 5 25, pointer;
+}
+
+.check-sub .check {
+  top: 20%;
+}
+
+.check-sub .check-box,
+.check-sub .check-v {
+  left: 10px;
+}
+
+.check-sub .check-v {
+  position: absolute;
+  top: 7px;
+  left: 4px;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.check-sub span {
+  padding-left: 15px;
+  font-family: 'Middleschool_student';
+  font-size: 1.6rem;
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.check-sub .check-bar img {
+  width: 90px;
+  height: 100%;
+}
+
+.check-sub .check-bar {
+  width: 0;
+  left: 55px;
+  overflow: hidden;
+}
+
+.check-sub .check:hover .check-bar {
+  width: 90px;
+}
+
+.check-sub .check:hover span {
+  font-weight: bold;
+}
+
+.check-sub .check {
+  left: -100%;
+  transition: all 1s;
+  margin: 8px 0;
+}
+
+/* class on이 붙었을 때 */
+
+.check-text .check.on .check-v {
+  opacity: 1;
+}
+
+.check-text .check.on .check-bar {
+  width: 90px;
+}
+
+.check-sub .check.on .check-v {
+  opacity: 1;
+}
+
+.check-sub .check.on .check-bar {
+  width: 90px;
+}
+
+.check-sub .check.on span {
+  font-weight: bold;
+}
+
+.check-sub .check.on .check-box {
+  opacity: 0;
+}
+
+
+/* 리스트 컨텐츠 영역 */
+.con-wrap {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* transition: all 0.6s; */
+  display: none;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.con-wrap::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+.con-wrap:hover {
+  cursor: url(../images/cursor-p.png) 5 25, pointer;
+}
+
+.con-wrap > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.con1 {
+  transition: all 0.8s;
+  transition-delay: 0.2s;
+  background-color: #d2cfee;
+  overflow: hidden;
+}
+
+.con2 {
+  transition: all 0.8s;
+  transition-delay: 0.2s;
+  background-color: #cfc1bb;
+}
+
+.con3 {
+  transition: all 0.8s;
+  transition-delay: 0.2s;
+  background-image: url(../images/con3-bg.JPG);
+}
+
+.con4 {
+  transition: all 0.8s;
+  transition-delay: 0.2s;
+  background-color: #fff
+}
+
+.con1-img-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.con1-img-wrap img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  object-fit: cover;
+  object-position: center top;
+  transition: all 0.4s;
+}
+
+.t-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.con1-img-wrap > img:first-child {
+  animation: bling 2.5s infinite;
+}
+
+
+.con1-img-wrap > img:nth-child(3) {
+  animation: eyes 3s infinite;
+}
+
+.t1.on,
+.t2.on,
+.t3.on,
+.t4.on {
+  top: -10px;
+  opacity: 1;
+}
+
+.t1,
+.t2,
+.t3,
+.t4 {
+  top: 50px;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.6s;
+}
+
+@keyframes bling {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes eyes {
+  0% {
+    opacity: 0;
+  }
+  88% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  94% {
+    opacity: 0;
+  }
+  96% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.con2-memo {
+  position: relative;
+  width: 1000px;
+  height: 800px;
+  top: calc(50% - 400px);
+  left: calc(50% - 500px);
+}
+
+.con2-memo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.con2-bg {
+  position: absolute;
+  z-index: 50;
+  top: calc(50% - 200px);
+  left: calc(50% - 380px);
+  width: 810px;
+  height: 400px;
+  padding: 0 20px;
+}
+
+.con2-icon {
+  position: absolute;
+  z-index: 100;
+  top: calc(50% - 200px);
+  left: calc(50% - 380px);
+  width: 810px;
+  height: 400px;
+  padding: 0 20px;
+  transition: all 0.2s;
+}
+
+.con2-icon img {
+  width: 120px;
+  margin: 20px 10px;
+  transition: all 0.2s;
+}
+
+.con2-icon img:hover {
+  transform: scale(1.1);
+}
+
+.con2-detail > p {
+  position: relative;
+  z-index: 80;
+  top: 305px;
+  font-family: 'Middleschool_student';
+  text-align: center;
+  font-size: 1.8rem;
+  margin-left: -30px;
+}
+
+.con2-detail > p > span {
+  font-size: 2rem;
+  color: #ff6004;
+}
+
+.con2-detail {
+  position: absolute;
+  width: 840px;
+  height: 518px;
+  overflow: hidden;
+  top: calc(50% - 259px);
+  left: calc(50% - 400px);
+}
+
+.con2-skill-bar {
+  position: relative;
+  top: 100px;
+  left: 240px;
+  width: 600px;
+  height: 100px;
+}
+
+.con2-skill-stick {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.con2-stick {
+  width: 500px;
+  height: 100%;
+}
+
+.con2-stick img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-top: 15px;
+}
+
+
+.con2-skill-arrow {
+  width: 100px;
+  height: 100px;
+}
+
+.con2-skill-arrow img {
+  width: 40px;
+  margin-left: -20px;
+}
+
+.con2-simple-per-wrap {
+  position: absolute;
+  top: 195px;
+  z-index: 50;
+  width: 800px;
+  padding-left: 45px;
+}
+
+.con2-simple-per {
+  width: 146px;
+  text-align: center;
+  color: #666;
+  font-size: 1.6rem;
+  font-family: 'Middleschool_student';
+  float: left;
+  margin-bottom: 135px;
+}
+
+.con2-per-wrap {
+  position: absolute;
+  top: 190px;
+  left: 460px;
+  color: #456fa7;
+}
+
+.con2-per {
+  position: absolute;
+  top: -15px;
+  display: none;
+  font-size: 1.8rem;
+  font-family: 'Middleschool_student';
+}
+
+.con2-d-wrap {
+  width: 100%;
+  position: relative;
+  top: 145px;
+  padding: 0 70px;
+}
+
+.d {
+  position: absolute;
+  width: 650px;
+  text-align: left;
+  display: none;
+}
+
+.d > p {
+  position: relative;
+  top: 0;
+  font-family: 'Middleschool_student';
+  font-size: 2.2rem;
+  text-align: left;
+  color: #000000;
+}
+
+.d > span {
+  font-family: 'Middleschool_student';
+  font-size: 1.8rem;
+  display: block;
+  margin-top: 30px;
+  line-height: 1.5;
+}
+
+.con3-mark-wrap {
+  position: absolute;
+  top: -80px;
+  left: 30px;
+  width: 1200px;
+}
+
+.con3-mark-wrap img {
+  position: relative;
+  top: 25px;
+  width: 150px;
+  transition: all 0.2s;
+}
+
+.con3-mark-wrap img.on {
+  top: 0;
+}
+
+.con3-title {
+  position: absolute;
+  top: 30px;
+  left: 7px;
+  font-family: 'Middleschool_student';
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+}
+
+.con3-title span {
+  text-align: center;
+  display: block;
+  width: 133px;
+  margin-right: 22.5px;
+  transition: all 0.2s;
+  height: 100px;
+  margin-top: -5px;
+  line-height: 55px;
+}
+
+.con3-title span.on {
+  margin-top: -25px;
+}
+
+.con3-folder {
+  position: relative;
+  width: 1200px;
+  height: 650px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -55%);
+}
+
+.con3-folder > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.con3-folder > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.con3-mark {
+  padding: 80px 30px;
+  opacity: 0;
+}
+
+.con3-mark.on {
+  opacity: 1;
+  z-index: 10;
+}
+
+.con3-mark-img {
+  width: 651px;
+  height: 100%;
+  padding: 20px;
+}
+
+.con3-mark-img img {
+  width: 100%;
+  height: 310px;
+  object-fit: fill;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.con3-mark-text {
+  width: 38%;
+  height: 350px;
+  padding: 20px;
+  padding-right: 10px;
+  font-family: 'Middleschool_student';
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.con3-mark-text span {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.con3-mark-more {
+  position: absolute;
+  top: 470px;
+  left: 50px;
+  height: 50px;
+  font-family: 'Middleschool_student';
+  font-size: 2rem;
+  padding: 5px;
+}
+
+.con3-mark-more a {
+  color: #1194ff;
+  border-bottom: 1px solid #1194ff;
+  margin-left: 20px;
+  transition: all 0.1s;
+}
+
+.con3-mark-more a:hover {
+  color: #ff7b00;
+  border-color: #ff7b00;
+}
