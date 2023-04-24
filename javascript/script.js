@@ -1,3 +1,9 @@
+// 콘솔 효과
+console.log(
+  "('v'  ) 제 포트폴리오에 오신 것을 환영합니다!"
+)
+
+
 // 메인 타이핑 효과
 
 // let content = 'Portfolio';
@@ -534,3 +540,19 @@ $('.con3-title > span').click(function(){
   $('.con3-mark').eq(m).addClass('on');
   
 });
+
+//con4
+
+function copyToClipboard(val) {
+  var t = document.createElement("textarea");
+  document.body.appendChild(t);
+  t.value = val;
+  t.select();
+  document.execCommand('copy');
+  document.body.removeChild(t);
+  }
+
+  $('#copybtn1').click(function() {
+    copyToClipboard('ellen095@naver.com');
+    alert('이메일 주소를 복사했습니다!');
+  });
