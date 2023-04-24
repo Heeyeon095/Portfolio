@@ -6,45 +6,45 @@ console.log(
 
 // 메인 타이핑 효과
 
-// let content = 'Portfolio';
-// let content2 = 'By Heeyeon';
-// const text = document.querySelector('.main-text');
-// const text2 = document.querySelector('.main-text2')
-// let mt = 0;
-// let mt2 = 0;
+let content = 'Portfolio';
+let content2 = 'By Heeyeon';
+const text = document.querySelector('.main-text');
+const text2 = document.querySelector('.main-text2')
+let mt = 0;
+let mt2 = 0;
 
-// function typing(){
+function typing(){
 
-//   let txt = content[mt++];
+  let txt = content[mt++];
   
-//   if (mt > content.length + 3) {
+  if (mt > content.length + 3) {
 
-//     let txt2 = content2[mt2++];
+    let txt2 = content2[mt2++];
 
-//     if(mt2 >= 0 && mt2 <= content2.length) {
-//       text2.innerHTML += txt2;
-//       $('.main-text-blink2').css({
-//         display: 'inline-block'
-//       });
-//       $('.main-text-blink').css({
-//         display: 'none'
-//       });
-//     } else if(mt2 > content2.length + 8) {
-//       clearInterval(typing);
-//       $('.main-text-blink2').css({
-//         display: 'none'
-//       });
-//       lego();
-//     }
+    if(mt2 >= 0 && mt2 <= content2.length) {
+      text2.innerHTML += txt2;
+      $('.main-text-blink2').css({
+        display: 'inline-block'
+      });
+      $('.main-text-blink').css({
+        display: 'none'
+      });
+    } else if(mt2 > content2.length + 8) {
+      clearInterval(typing);
+      $('.main-text-blink2').css({
+        display: 'none'
+      });
+      lego();
+    }
 
-//   } else if (mt > 0 && mt <= content.length) {
-//     text.innerHTML += txt;
-//   };
-// };
+  } else if (mt > 0 && mt <= content.length) {
+    text.innerHTML += txt;
+  };
+};
 
-// setInterval(typing, 200);
+setInterval(typing, 200);
 
-lego();
+// lego();
 
 
 
