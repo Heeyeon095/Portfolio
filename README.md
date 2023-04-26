@@ -1,7 +1,7 @@
 # Portfolio
 저의 첫 번째 개인 포트폴리오에 오신 것을 환영합니다!
 
-## main
+## Main
 
 ![image](https://user-images.githubusercontent.com/128978408/234433966-33145897-cd3a-467a-bd52-4e8089237ace.png)
 
