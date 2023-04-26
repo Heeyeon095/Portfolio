@@ -5,7 +5,7 @@
 
 ![image](https://user-images.githubusercontent.com/128978408/234433966-33145897-cd3a-467a-bd52-4e8089237ace.png)
 
-## Use Skills
+## Skills
 
 ![vscode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)
 ![html5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
