@@ -148,6 +148,9 @@ a {
   box-shadow: 0 0 50px rgb(255, 255, 154);
 }
 
+.bg7 {
+  top: 2%;
+}
 /* main - 버튼 클릭시 애니메이션 */
 
 @keyframes con {
@@ -187,10 +190,12 @@ a {
   }
   30% {
     top: -80px;
+    transform: scale(1.05);
   }
   60% {
     top: 80px;
     opacity: 1;
+    transform: scale(1);
   }
   99% {
     top: 300px;
@@ -206,10 +211,10 @@ a {
     top: 0;
   }
   60% {
-    top: -5%;
+    top: -10%;
   }
   100% {
-    top: -15%;
+    top: -18%;
     display: none;
   }
 }
@@ -268,7 +273,7 @@ a {
 
 @keyframes bg7 {
   30% {
-    top: 0;
+    top: 2%;
   }
   60% {
     top: -40%;

@@ -1,12 +1,6 @@
-// 콘솔 효과
-console.log(
-  "('v'  ) 제 포트폴리오에 오신 것을 환영합니다!"
-)
-
-
 // 메인 타이핑 효과
 
-let content = 'Portfolio';
+/* let content = 'Portfolio';
 let content2 = 'By Heeyeon';
 const text = document.querySelector('.main-text');
 const text2 = document.querySelector('.main-text2')
@@ -42,9 +36,9 @@ function typing(){
   };
 };
 
-setInterval(typing, 200);
+setInterval(typing, 200); */
 
-// lego();
+lego();
 
 
 
