@@ -38,7 +38,7 @@ function typing(){
 
 setInterval(typing, 200);
 
-lego();
+// lego();
 
 
 
