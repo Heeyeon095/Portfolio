@@ -1,6 +1,6 @@
 // 메인 타이핑 효과
 
-/* let content = 'Portfolio';
+let content = 'Portfolio';
 let content2 = 'By Heeyeon';
 const text = document.querySelector('.main-text');
 const text2 = document.querySelector('.main-text2')
@@ -36,7 +36,7 @@ function typing(){
   };
 };
 
-setInterval(typing, 200); */
+setInterval(typing, 200);
 
 lego();
 
@@ -347,100 +347,12 @@ function t4 () {
   $('.t4').addClass('on');
 }
 
-let icon = 0
 
-$('.con2-icon > img').click(function (){
+//con2
 
-  let i = $(this).index();
-
-  if (icon == 0) {
-    $('.con2-icon > img').not(this).css({
-      display: 'none'
-    });
-    $('.con2-icon').css({
-      top: 'calc(50% - 200px)'
-    });
-    $('.con2-bg').css({
-      backgroundColor: 'rgba(250, 240, 231,0)'
-    });
-    $('.con2-detail > p').css({
-      display: 'none'
-    });
-    $('.d').eq(i).css({
-      display: 'block'
-    });
-    $('.con2-per').eq(i).css({
-      display: 'block'
-    });
-    $('.con2-simple-per').css({
-      display: 'none'
-    });
-
-    if(i == 0) {
-      $('.con2-skill-stick').css({
-        width: '64%'
-      });
-    } else if(i == 1) {
-      $('.con2-skill-stick').css({
-        width: '64%'
-      });
-    } else if(i == 2) {
-      $('.con2-skill-stick').css({
-        width: '72%'
-      });
-    } else if(i == 3) {
-      $('.con2-skill-stick').css({
-        width: '68%'
-      });
-    } else if(i == 4) {
-      $('.con2-skill-stick').css({
-        width: '56%'
-      });
-    } else if(i == 5) {
-      $('.con2-skill-stick').css({
-        width: '74%'
-      });
-    } else if( i == 6) {
-      $('.con2-skill-stick').css({
-        width: '60%'
-      });
-    } else if(i == 7) {
-      $('.con2-skill-stick').css({
-        width: '36%'
-      });
-    } else if(i == 8) {
-      $('.con2-skill-stick').css({
-        width: '56%'
-      });
-    }
-    icon++;
-  } else {
-    $('.con2-icon > img').not(this).css({
-      display: 'inline-block'
-    });
-    $('.con2-icon').css({
-      top: 'calc(50% - 200px)'
-    });
-    $('.con2-bg').css({
-      backgroundColor: 'rgba(250, 240, 231,1)'
-    });
-    $('.con2-detail > p').css({
-      display: 'block'
-    });
-    $('.d').eq(i).css({
-      display: 'none'
-    });
-    $('.con2-per').eq(i).css({
-      display: 'none'
-    });
-    $('.con2-skill-stick').css({
-      width: '0'
-    });
-    $('.con2-simple-per').css({
-      display: 'block'
-    });
-    icon = 0;
-  }
+$('.skill').click(function () {
+  $('.skill').removeClass('show');
+  $(this).addClass('show');
 });
 
 //con3
@@ -535,18 +447,87 @@ $('.con3-title > span').click(function(){
   
 });
 
-//con4
+// portfolio slide
 
-function copyToClipboard(val) {
-  var t = document.createElement("textarea");
-  document.body.appendChild(t);
-  t.value = val;
-  t.select();
-  document.execCommand('copy');
-  document.body.removeChild(t);
-  }
+let pf = 0;
 
-  $('#copybtn1').click(function() {
-    copyToClipboard('ellen095@naver.com');
-    alert('이메일 주소를 복사했습니다!');
+$('.portfolio-prev > i').click(function(){
+  console.log(pf);
+  if(pf == 0) {
+
+  } else if(pf == 1) {
+    $(this).css({
+      backgroundColor: 'rgba(0,0,0,0.05)'
+    });
+    $('.portfolio-con').css({
+      left: 'calc(50% - 330px)'
+    });
+    $('.portfolio').removeClass('on');
+    $('.portfolio').eq(pf-1).addClass('on');
+    pf--;
+  } else if(pf == 2) {
+      $('.portfolio-con').css({
+        left: 'calc(50% + -960px)'
+      });
+      $('.portfolio').removeClass('on');
+      $('.portfolio').eq(pf-1).addClass('on');
+    pf--;
+  } else if(pf == 3) {
+    $('.portfolio-next > i').css({
+      backgroundColor: 'rgba(0,0,0,0.2)'
+    });
+    $('.portfolio-con').css({
+      left: 'calc(50% + -1590px)'
+    });
+    $('.portfolio').removeClass('on');
+    $('.portfolio').eq(pf-1).addClass('on');
+    pf--;
+  } else if(pf == 4) {} 
+});
+
+$('.portfolio-next > i').click(function(){
+    if(pf == 0) {
+      $('.portfolio-prev > i').css({
+        backgroundColor: 'rgba(0,0,0,0.2)'
+      });
+      $('.portfolio-con').css({
+        left: 'calc(50% + -960px)'
+      });
+      $('.portfolio').eq(pf).removeClass('on');
+      $('.portfolio').eq(pf+1).addClass('on');
+      pf++;
+    } else if(pf == 1) {
+      $('.portfolio').removeClass('on');
+      $('.portfolio').eq(pf+1).addClass('on');
+      $('.portfolio-con').css({
+        left: 'calc(50% + -1590px)'
+      });
+      pf++;
+    } else if(pf == 2) {
+      $('.portfolio').removeClass('on');
+      $('.portfolio').eq(pf+1).addClass('on');
+      $('.portfolio-con').css({
+        left: 'calc(50% + -2225px)'
+      });
+      $(this).css({
+        backgroundColor: 'rgba(0,0,0,0.05)'
+      });
+      pf++;
+    } else if(pf == 3) {}
   });
+
+//con4
+// need <menu>
+
+let curr = 0;
+
+function oslide() {
+  i = curr % 4;
+
+  curr++;
+  
+  $(".need-text").removeClass('on');
+  $(".need-text").eq(i).addClass('on');
+}
+
+setInterval(() => oslide(), 4000);
